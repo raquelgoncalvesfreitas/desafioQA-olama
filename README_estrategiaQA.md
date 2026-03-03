@@ -60,7 +60,7 @@
 
 ## 3) O que eu priorizaria automatizar primeiro (e por quê)
 
-### Prioridade 1 — API “happy path” ponta a ponta (maior valor e menor custo)
+### Prioridade 1 — fluxos de API
 Automatizar o fluxo crítico que valida o sistema inteiro:
 1. **Criar ticket** (retorna ID)
 2. **Consultar por ID** (valida persistência e payload)
@@ -74,13 +74,9 @@ Automatizar o fluxo crítico que valida o sistema inteiro:
 - Casos negativos mais prováveis: campos obrigatórios, enums inválidos, ID inexistente.
 **Motivo:** impede lixo de dados, melhora confiabilidade e reduz incidentes em produção.
 
-### Prioridade 3 — Contrato de resposta (protege consumidores)
+### Prioridade 3 — Contrato de resposta
 - Validação de schema e tipos (ex.: JSON Schema/Pydantic validation).
-**Motivo:** garante estabilidade do formato e evita regressão silenciosa.
-
-### Prioridade 4 — Regressão por transição de status e regras adicionais
-- Se houver regra de transição (ex.: não reabrir fechado), automatizar matriz de transições.
-**Motivo:** regras de estado costumam quebrar quando o sistema evolui.
+**Motivo:** garante estabilidade do formato.
 
 ---
 

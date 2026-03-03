@@ -3,12 +3,6 @@ Funcionalidade: Criação de ticket
   Quero criar tickets com título, descrição e prioridade
   Para registrar e acompanhar solicitações
 
-  # Critérios de aceite (Criação)
-  # CA01: Deve ser possível criar ticket informando Título, Descrição e Prioridade válidos.
-  # CA02: Ao criar com sucesso, o sistema deve retornar um ID único do ticket e status inicial "Aberto".
-  # CA03: Campos obrigatórios devem ser validados e, em caso de erro, o sistema deve informar a causa e não criar o ticket.
-  # CA04: Prioridade deve aceitar apenas valores do domínio permitido (ex.: Baixa, Média, Alta).
-
   Cenário: Criar ticket com dados válidos
     Dado que estou com os dados de ticket válidos
       E o título é "Erro ao acessar o sistema"
@@ -53,13 +47,6 @@ Funcionalidade: Atualização de status do ticket
   Como usuário do sistema de Helpdesk
   Quero atualizar o status de um ticket
   Para refletir o andamento do atendimento
-
-  # Critérios de aceite (Status)
-  # CA01: Deve ser possível atualizar o status de um ticket existente para: "Aberto", "Em andamento" ou "Fechado".
-  # CA02: Ao atualizar com sucesso, o sistema deve persistir e refletir o novo status na consulta por ID.
-  # CA03: Não deve permitir atualizar status de ticket inexistente (retorno de erro "Ticket não encontrado").
-  # CA04: Não deve permitir status fora do domínio permitido.
-  # CA05 (se aplicável): Transições de status devem respeitar regras definidas. (Se não houver regra, aceitar qualquer transição entre os 3 valores.)
 
   Contexto:
     Dado que existe um ticket criado com ID "TCK-1001"
