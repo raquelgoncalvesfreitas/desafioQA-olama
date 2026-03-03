@@ -1,0 +1,11 @@
+{
+  "usuario": {
+    "nome": "QA Teste",
+    "senha": "123456"
+  },
+
+  "admin": {
+    "nome": "Admin QA",
+    "senha": "123456"
+  } 
+}
