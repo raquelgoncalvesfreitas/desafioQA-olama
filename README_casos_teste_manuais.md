@@ -33,7 +33,7 @@ Então o ticket deve ser criado com sucesso
 E deve ser retornado um ID único do ticket
 E o status inicial do ticket deve ser "Aberto"
 E o ticket criado deve estar disponível para consulta pelo ID retornado
-
+```
 
 ## Cenário 2 — Criar ticket com prioridade alta
 
@@ -49,7 +49,7 @@ Quando eu solicitar a criação do ticket
 Então o ticket deve ser criado com sucesso
 E deve ser retornado um ID único do ticket
 E o status inicial do ticket deve ser "Aberto"
-
+```
 
 ## Cenário 3 — Não permitir criação sem título
 
@@ -64,6 +64,7 @@ Quando eu solicitar a criação do ticket
 
 Então o ticket não deve ser criado
 E deve ser exibida uma mensagem de erro informando que "Título é obrigatório"
+```
 
 ## Cenário 4 — Não permitir prioridade inválida
 
@@ -78,6 +79,7 @@ Quando eu solicitar a criação do ticket
 Então o ticket não deve ser criado
 E deve ser exibida uma mensagem de erro informando que "Prioridade inválida"
 E deve ser informado o conjunto de prioridades aceitas
+```
 
 ## Cenário 5 — Não permitir criação sem descrição
 
@@ -91,6 +93,7 @@ Quando eu solicitar a criação do ticket
 
 Então o ticket não deve ser criado
 E deve ser exibida uma mensagem de erro informando que "Descrição é obrigatória"
+```
 
 ---
 
@@ -116,7 +119,7 @@ Quando eu atualizar o status do ticket "TCK-1001" para "Em andamento"
 
 Então o status do ticket "TCK-1001" deve ser atualizado com sucesso
 E ao consultar o ticket "TCK-1001" o status deve ser "Em andamento"
-
+```
 
 ## Cenário 7 — Atualizar status de Em andamento para Fechado
 
@@ -130,7 +133,7 @@ Quando eu atualizar o status do ticket "TCK-1001" para "Fechado"
 
 Então o status do ticket "TCK-1001" deve ser atualizado com sucesso
 E ao consultar o ticket "TCK-1001" o status deve ser "Fechado"
-
+```
 
 ## Cenário 8 — Não permitir atualizar ticket inexistente
 
@@ -141,6 +144,7 @@ Quando eu atualizar o status do ticket "TCK-9999" para "Em andamento"
 
 Então o sistema deve retornar erro de "Ticket não encontrado"
 E nenhum ticket deve ser alterado
+```
 
 ## Cenário 9 — Não permitir status inválido
 
@@ -153,6 +157,7 @@ Quando eu atualizar o status do ticket "TCK-1001" para "Cancelado"
 Então o sistema deve rejeitar a atualização
 E deve ser exibida uma mensagem de erro informando que "Status inválido"
 E ao consultar o ticket "TCK-1001" o status deve permanecer "Aberto"
+```
 
 ## Cenário 10 — Não permitir status vazio
 
@@ -164,3 +169,4 @@ Quando eu solicitar a atualização do status do ticket "TCK-1001" sem informar 
 Então o sistema deve rejeitar a atualização
 E deve ser exibida uma mensagem de erro informando que "Status é obrigatório"
 E ao consultar o ticket "TCK-1001" o status deve permanecer "Aberto"
+```
