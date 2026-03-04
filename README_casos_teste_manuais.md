@@ -86,10 +86,6 @@ E deve ser exibida uma mensagem de erro informando que "Descrição é obrigató
 
 ---
 
-Contexto:
-Dado que existe um ticket criado com ID "TCK-1001"
-E o status atual do ticket "TCK-1001" é "Aberto"
-
 
 ## Cenário 6 — Atualizar status de Aberto para Em andamento
 
