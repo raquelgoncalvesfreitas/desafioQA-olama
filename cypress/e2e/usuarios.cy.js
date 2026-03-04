@@ -6,6 +6,15 @@ describe('Usuários - API Serverest', () => {
   const emailDuplicado = 'duplicado@teste.com';
   const emailNovo = `novo_${Date.now()}@teste.com`;
 
+  before(() => {
+    cy.criarUsuarioSeNaoExistir({
+      nome: "Usuário Existente",
+      email: emailDuplicado,
+      password: senha,
+      administrador: "true"
+    });
+  });
+
   it('Criar novo usuário com sucesso', () => {
     cy.criarUsuario({
       nome: "QA Teste Novo",
@@ -19,7 +28,7 @@ describe('Usuários - API Serverest', () => {
     });
   });
 
-  it.only('Criar usuário duplicado', () => {
+  it('Criar usuário duplicado', () => {
     cy.criarUsuario({
       nome: "QA Teste",
       email: emailDuplicado,
